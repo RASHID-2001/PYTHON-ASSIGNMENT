@@ -1,32 +1,13 @@
 """
-QN:Write a Python program to draw a hexagon and to fill it with red colour. Explain
-the turtle methods used in it.(MAY 2023)
-ANS:
+UNIVERSITY QUESTION :: JUNE 2022
 
-   Method	                   Description
-turtle.Turtle()	  :Creates a turtle object to draw shapes.
-fillcolor("red")  :Sets the fill color to red.
-begin_fill()	  :Marks the beginning of a filled shape.
-for _ in range(6) :A loop to draw six sides of the hexagon.
-forward(100)	  :Moves the turtle forward by 100 units.
-left(60)	  :Turns the turtle left by 60° (hexagon has 120° interior angles).
-end_fill()	  :Fills the shape with the previously set color.
-hideturtle()	  :Hides the turtle pointer after drawing is complete.
-turtle.done()	  :Keeps the drawing window open.
+Write Python code for the following statements
+i)write the text "PROGRAMMING IN PYTHON"in to a file of name code.txt
+ii) then reads the text again and prints it to the screen.
 
 """
-#PROGRAM
-import turtle
-t = turtle.Turtle()
-
-
-t.fillcolor("red")  
-t.begin_fill()   
-for _ in range(6):
-    t.forward(100)  
-    t.left(60)     
-
-t.end_fill() 
-
-t.hideturtle()
-turtle.done()
+f=open("code.txt","w")
+f.write("PROGRAMMING IN PYTHON")
+f=open("code.txt","r")
+content=f.read()
+print("CONTENT OF THE FILE:",content)

@@ -1,10 +1,26 @@
-""""
-QN:Write a Python program to draw a hexagon using turtle graphics(JANUARY 2024)
 """
-import turtle
-t=turtle.Turtle()
-for i in range(6):
-	t.forward(150)
-	t.left(60)
-t.hideturtle()
-turtle.done()
+UNIVERSITY QUESTION :MAY 2023
+
+Write a Python program to implement Caesar cipher encryption and decryption
+on a string of lowercase letters. Take distance value and the string as input. (Hint:
+Caesar cipher encryption strategy replaces each character in the plaintext with the
+character that occurs a given distance away in the sequence.
+
+"""
+text = input("Enter a string (lowercase letters only): ")
+shift = int(input("Enter shift distance: "))
+mode = input("Enter mode (encrypt/decrypt): ")
+
+if mode == 'decrypt':
+    shift = -shift  
+
+result = ""
+for char in text:
+    if char.islower():  
+        new_char = chr(((ord(char) - ord('a') + shift) % 26) + ord('a'))
+        result += new_char
+    else:
+        result += char  
+
+print("Result:", result)
+
